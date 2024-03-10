@@ -1,0 +1,5 @@
+_target_: timm.scheduler.cosine_lr.CosineLRScheduler
+lr_min: 1e-7
+warmup_t: 5
+warmup_lr_init: 1e-8
+t_in_epochs: True

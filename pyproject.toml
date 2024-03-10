@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "video-ct-mae"
+version = "0.1.0"
+description = ""
+authors = ["Lukas Buess"]
+
+[tool.poetry.dependencies]
+python = "3.9.13"
+hydra-core = "^1.1.1"
+torch = { url = "https://download.pytorch.org/whl/cu111/torch-1.8.1%2Bcu111-cp39-cp39-win_amd64.whl"}
+torchaudio = { url = "https://download.pytorch.org/whl/torchaudio-0.8.1-cp39-none-win_amd64.whl"}
+torchvision = { url = "https://download.pytorch.org/whl/cu111/torchvision-0.9.1%2Bcu111-cp39-cp39-win_amd64.whl"}
+logging = "^0.4.9.6"
+timm="0.4.12"
+pathlib = "^1.0.1"
+tensorboard = "^2.16.2"
+pandas = "^2.2.0"
+monai = "1.0.1"
+scikit-learn = "1.0.2"
+tqdm = "^4.66.2"
+nibabel = "4.0.2"
+torchmetrics = "0.5.0"
+iopath = "^0.1.10"
+psutil = "^5.9.8"
+simplejson = "^3.19.2"
+matplotlib = "3.4.2"
+pillow = "8.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pre-commit = "^2.17.0"
+# ipykernel = "^6.28.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+ignore = ["E501", "B905"]
+select = ["B","C","E","F","W","B9", "I", "Q"]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+
+[tool.ruff.mccabe]
+max-complexity = 15

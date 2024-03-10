@@ -1,0 +1,21 @@
+defaults:
+  - _self_
+  - model: default
+  - data: default
+  - optimizer: adam
+  - lr_scheduler: cosine
+  - loss: ce
+
+task: finetuning
+test_after_training: True # evaluate the model on the test set after training
+
+# directories
+save_dir: "./models"
+log_dir: "./logs"
+
+# hyperparameters
+epochs: 50
+early_stopping_patience: 40
+batch_size: 64
+class_weights: True # whether to use class weights for loss the function
+ensemble_strategy: "mean" # whether to use ensemble prediction (options: "" (not use ensemble), "mean")

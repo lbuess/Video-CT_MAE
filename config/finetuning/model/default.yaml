@@ -1,0 +1,15 @@
+_target_: src.finetuning.model.ViT
+
+# dimensions
+input_size: 96
+num_frames: 16
+t_patch_size: 2
+num_classes: 2
+
+# extra tokens
+cls_embed: True
+sep_pos_embed: True
+
+# weights initialization
+pos_enc_init: "pretrained" # positional encoding initialization ("pretrained": use full pretrained weights, "crop": crop positional encodings, "random": random)
+pretrained_weights: ""
