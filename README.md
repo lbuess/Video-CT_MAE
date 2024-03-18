@@ -30,10 +30,12 @@ Vertebral body diagnosis is a critical task in medical image analysis that can g
 ## Citation
 ```BibTeX
 @inproceedings{buess2024videoct,
-  title={Video-CT MAE: Self-supervised Video-CT Domain Adaptation for Vertebral Fracture Diagnosis}, 
-  author={Buess, Lukas and Stollenga, Marijn F and Schinz, David and Wiestler, Benedikt and Kirschke, Jan and Maier, Andreas and Navab, Nassir and Keicher, Matthias},
-  booktitle={Medical Imaging with Deep Learning},
+  title={Video-{CT} {MAE}: Self-supervised Video-{CT} Domain Adaptation for Vertebral Fracture Diagnosis},
+  author={Lukas Buess and Marijn F. Stollenga and David Schinz and Benedikt Wiestler and Jan Kirschke and Andreas Maier and Nassir Navab and Matthias Keicher},
+  booktitle={Submitted to Medical Imaging with Deep Learning},
   year={2024},
+  url={https://openreview.net/forum?id=shuwpLaOJP},
+  note={under review}
 }
 ```
 
