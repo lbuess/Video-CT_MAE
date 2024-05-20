@@ -35,7 +35,7 @@ Vertebral body diagnosis is a critical task in medical image analysis that can g
   booktitle={Submitted to Medical Imaging with Deep Learning},
   year={2024},
   url={https://openreview.net/forum?id=shuwpLaOJP},
-  note={under review}
+  note={accepted}
 }
 ```
 
