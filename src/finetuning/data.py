@@ -2,6 +2,7 @@
 
 import logging
 from pathlib import Path
+from typing import Dict, Tuple
 
 import pandas as pd
 from monai.data import DataLoader, Dataset
@@ -11,7 +12,7 @@ from omegaconf import DictConfig
 from src.finetuning.utils.transforms import get_all_transforms
 
 
-def get_data_loaders(cfg: DictConfig) -> tuple[DataLoader, DataLoader, DataLoader]:
+def get_data_loaders(cfg: DictConfig) -> Tuple[DataLoader, DataLoader, DataLoader]:
     """
     Get data loaders for training, validation, and test set.
 
@@ -19,7 +20,7 @@ def get_data_loaders(cfg: DictConfig) -> tuple[DataLoader, DataLoader, DataLoade
         cfg (DictConfig): Configuration file
 
     Returns:
-        tuple[DataLoader, DataLoader, DataLoader]: Training, validation, and test data loader
+        Tuple[DataLoader, DataLoader, DataLoader]: Training, validation, and test data loader
     """
     data_dir = Path(cfg.data.source_path)
     logging.info(f"Loading data from {data_dir}")
@@ -94,7 +95,7 @@ def create_data_loader(
 
 def prepare_datasets(
     df: pd.DataFrame, splits: list, cfg: DictConfig, data_dir: Path
-) -> dict[str, Dataset]:
+) -> Dict[str, Dataset]:
     """
     Prepare datasets for each split.
 
